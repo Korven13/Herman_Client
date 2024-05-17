@@ -6,7 +6,7 @@ public class Client {
 
         Socket client = null;
 
-        int portNumber = 44444;
+        int portNumber = 55555;
         if (args.length >= 1) {
             portNumber = Integer.parseInt(args[0]);
         }
@@ -26,12 +26,12 @@ public class Client {
 
                 BufferedReader stdIn = new BufferedReader(new InputStreamReader(System.in));
 
-                System.out.println("Enter your name. Type bye to exit. ");
+                System.out.println("Skriv in uträkning. Type bye to exit. ");
 
                 msg = stdIn.readLine().trim();
                 pw.println(msg);
 
-                System.out.println("Message returned from the server = " + br.readLine());
+                System.out.println("Svar: " + br.readLine());
 
                 pw.close();
                 br.close();
